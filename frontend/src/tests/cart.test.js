@@ -50,7 +50,7 @@ describe('CartScreen', () => {
           </Routes>
         </MemoryRouter>
       </Provider>
-    );
+    )
 
     const checkoutButton = screen.getByRole('button', { name: /Proceed to Checkout/i });
 
