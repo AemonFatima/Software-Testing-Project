@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // Import Jest DOM matchers
-import Rating from '../components/Rating'; // Adjust the import path based on your project structure
+import '@testing-library/jest-dom/extend-expect'; 
+import Rating from '../components/Rating'; 
 
 test('Rating component displays correct number of stars and caption', () => {
-  // Define the props for your Rating component
+ 
   const props = {
-    rating: 3.5, // Set the rating value for testing
-    numReviews: 10, // Set the number of reviews (optional)
-    caption: 'Test Rating', // Set a caption (optional)
+    rating: 3.5, 
+    numReviews: 10, 
+    caption: 'Test Rating', 
   };
 
-  // Render the Rating component with the defined props
+ 
   const { container, getByText } = render(<Rating {...props} />);
 
   // Verify that the correct number of stars is displayed
@@ -23,8 +23,7 @@ test('Rating component displays correct number of stars and caption', () => {
   expect(fullStars).toBe(3);
   expect(halfStars).toBe(1);
   expect(emptyStars).toBe(1);
-
-  // Verify that the caption is displayed if provided
+// Verify that the caption is displayed if provided
   if (props.caption) {
     const captionElement = getByText(props.caption);
     expect(captionElement).toBeInTheDocument();

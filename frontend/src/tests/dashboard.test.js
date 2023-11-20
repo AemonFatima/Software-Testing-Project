@@ -7,7 +7,7 @@ import DashboardScreen from '../screens/DashboardScreen';
 import { summaryOrder } from '../actions/orderActions';
 import '@testing-library/jest-dom/extend-expect';
 
-// Mock the order summary data for testing
+
 const mockSummary = {
   loading: false,
   summary: {
@@ -19,14 +19,14 @@ const mockSummary = {
   error: null,
 };
 
-// Mock the user authentication data
+
 const mockUserInfo = {
   userInfo: {
-    // Add necessary user information here
+   
   },
 };
 
-// Create a mock Redux store with thunk middleware
+
 const mockStore = configureStore([thunk]);
 
 describe('DashboardScreen', () => {
@@ -75,5 +75,5 @@ describe('DashboardScreen', () => {
     });
   });
 
-  // Add more test cases as needed for different scenarios, such as handling different chart data, etc.
+  
 });
